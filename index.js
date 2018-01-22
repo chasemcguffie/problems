@@ -70,20 +70,178 @@ console.log("Lowest number: " + randomNumbers[0])
 
 //Fourth problem
 
-var saidNum = [];
 
 for (l = 1; l < 101; l++) {
     if (l % 3 === 0 && l % 5 === 0) {
-        saidNum.pop(l);
-        saidNum.push('covalence');
+        console.log('covalence');
     } else if 
-        (i % 5 === 0) {
-        saidNum.pop(l);
-        saidNum.push('valence');
+        (l % 5 === 0) {
+        console.log('valence');
     } else {
-        (i % 3 === 0) 
-        saidNum.pop(l);
-        saidNum.push('cove');
+        (l % 3 === 0) 
+        console.log('cove');
     }
 }
-console.log(saidNum)
+
+//Fifth problem ????????????
+
+var documents = {
+    lucy:'Lucy',
+    mike:'Mike',
+    luke: 'Luke',
+    james: 'James',
+    john: 'John Doe',
+    dave: 'Dave',
+    sarah: 'Sarah',
+    natalie: 'Natalie'
+}
+
+for (var key in documents) {
+    if (documents.hasOwnProperty("John Doe")) {
+        console.log(key + " -> " + documents[key]);
+    }
+}
+
+//Sixth Problem
+
+var reverseDocuments = [1, 2, 3, 4, 5, 6];
+console.log(reverseDocuments)
+reverseDocuments.reverse();
+console.log(reverseDocuments);
+
+//Seventh Problem
+
+var cdCollection = [3, 4, "maroon 5", 6, 7, 8, 9, 10];
+
+console.log(cdCollection);
+
+var index = cdCollection.indexOf("maroon 5");
+
+cdCollection.splice(index, 1);
+
+console.log(cdCollection)
+
+//Eigth Problem
+
+function getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+var cards = []
+
+for (var m = 0; m < 101; m++) {
+    let m = getRandomArbitrary(2000, 2010);
+    cards.push(m);
+}
+
+console.log(cards)
+console.log(cards[0])
+
+for (var n = 0; n < 101; n++) {
+    if (cards[n] === 2007) {
+        console.log("Yes")
+    } else {
+        console.log("No")
+    }
+}
+
+//Ninth Problem
+
+var book = [];
+var newBook = [];
+for (var o = 0; o < 101; o++) {
+    book.push(o);
+}
+console.log(book)
+
+function isOdd(n) {
+    return Math.abs(n % 2) == 1;
+}
+
+for (let o = 0; o < 101; o++) {
+    if (isOdd(book[o]) === true) {
+        newBook.push(book[o]);
+    }
+}
+console.log(newBook);
+
+// Tenth Problem
+
+var sentences = ["this is a sentence", "this is also a sentence", "lastly, this is also a sentence"];
+var newSentences = [];
+console.log(sentences)
+for (let p = 0; p < sentences.length; p++) {
+    console.log(sentences[p].toUpperCase());
+}
+
+//Eleventh Problem
+
+var canOne = "ben";
+var canTwo = "bartholoptomitusidius";
+var canThree = "dave";
+var canFour = "carol";
+const canFive = "draa'knar, destroyer of worlds";
+var candidates = [canOne, canTwo, canThree, canFour, canFive];
+var goodCandidates = [];
+
+console.log(candidates);
+
+if (canOne.length > 15) {
+    goodCandidates.push(canOne)
+}
+if (canTwo.length > 15) {
+    goodCandidates.push(canTwo)
+}
+if (canThree.length > 15) {
+    goodCandidates.push(canThree)
+}
+if (canFour.length > 15) {
+    goodCandidates.push(canFour)
+}
+if (canFive.length > 15) {
+    goodCandidates.push(canFive)
+}
+console.log(goodCandidates);
+
+//Twelfth Problem
+
+var orders = []
+
+for (let m = 0; m < 15; m++) {
+    let m = getRandomArbitrary(1, 4);
+    if (m === 1) {
+        orders.push("Hotdog")
+    } else {
+        if (m === 2) {
+            orders.push("Hamburger")
+        } else {
+            if (m === 3) {
+                orders.push("French fries")
+            } else {
+                if (m === 4)
+                    orders.push("Drink")
+            }
+        }
+    }
+}
+
+console.log(orders)
+
+for (let n = 0; n < 15; n++) {
+    if (orders[n] === "French fries") {
+        console.log("Yes")
+    } else {
+        console.log("No")
+    }
+}
+
+//Thirteenth Problem
+
+function reverse_a_number(n) {
+    n = n + "";
+    return n.split("").reverse().join("");
+}
+
+let d = getRandomArbitrary(1, 999);
+console.log(d);
+console.log(reverse_a_number(d));

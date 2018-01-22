@@ -85,20 +85,12 @@ for (l = 1; l < 101; l++) {
 
 //Fifth problem ????????????
 
-var documents = {
-    lucy:'Lucy',
-    mike:'Mike',
-    luke: 'Luke',
-    james: 'James',
-    john: 'John Doe',
-    dave: 'Dave',
-    sarah: 'Sarah',
-    natalie: 'Natalie'
-}
+var documents = ['Lucy','Mike', 'Luke', 'James', 'John Doe', 'Dave', 'Sarah', 'Natalie']
 
-for (var key in documents) {
-    if (documents.hasOwnProperty("John Doe")) {
-        console.log(key + " -> " + documents[key]);
+
+for (let k = 0; k < documents.length; k++) {
+    if (documents[k] === "John Doe") {
+        console.log(documents[k]);
     }
 }
 
